@@ -1,0 +1,19 @@
+{
+  "productid": "",
+  "productName": "",
+  "brand": "",
+  "price": "",
+  "productDetails": "",
+  "size": [
+    {
+      "sizeName": "",
+      "sizeName": ""
+    }
+  ],
+  "color": [
+    {
+      "colorName": "",
+      "colorName": ""
+    }
+  ]
+}
