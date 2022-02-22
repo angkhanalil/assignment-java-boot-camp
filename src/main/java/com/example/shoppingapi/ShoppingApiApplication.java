@@ -18,6 +18,7 @@ public class ShoppingApiApplication {
 		User   user =new User();
 		user.setUserId(1);
 		user.setFullName("nanniiz");
+		user.setEmail("angkhana");
 		userRepository.save(user);
 
 	}

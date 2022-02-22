@@ -7,9 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User,Integer> {
-    Optional<User> findById(Integer id);
+    Optional<User> findByUserId(Integer id);
 
 //    @Query("select u from User u where u.fullName = ?1")
-    User findByFullName(String fullname);
+//    User findByFullName(String fullname);
+
+//    @Query("select u from User u where u.email = ?1")
+    User findByEmail(String email);
 
 }

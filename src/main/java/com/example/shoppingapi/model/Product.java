@@ -7,10 +7,18 @@ import javax.persistence.Id;
 public class Product{
 	@Id
 	private int productid;
-	private String price;
+
+	private Double price;
+	private Double sellprice;
 	private String productDetails;
 	private String brand;
 	private String productName;
+	private String category;
+//	image
+//	sku
+//	store
+//	size
+//	color
 
 	public int getProductid() {
 		return productid;
@@ -20,12 +28,12 @@ public class Product{
 		this.productid = productid;
 	}
 
-	public void setPrice(String price){
-		this.price = price;
+	public Double getPrice() {
+		return price;
 	}
 
-	public String getPrice(){
-		return price;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 
 	public void setProductDetails(String productDetails){
@@ -50,5 +58,13 @@ public class Product{
 
 	public String getProductName(){
 		return productName;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 }

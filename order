@@ -1,0 +1,18 @@
+{
+  "userid": "",
+  "orderid": "",
+  "orderdate": "",
+  "netam": "",
+  "orderstatus": "",
+  "paymenttype": "",
+  "paymentdate": "",
+  "shippingaddress": "",
+  "tracking": "",
+  "orderItem": [
+    {
+      "productid": 1,
+      "price": "",
+      "qty": ""
+    }
+  ]
+}
