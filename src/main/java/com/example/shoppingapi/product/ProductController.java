@@ -28,7 +28,7 @@ public class ProductController {
 
     }
 
-    //    findById -- When Select one product
+    //    findById -- When Select one product Show Detail
     @GetMapping("/product/{id}")
     public ResponseEntity<Product> getproductbyid(@PathVariable Integer id) {
         return  productServeice.ShowProductbyProductID(id);
