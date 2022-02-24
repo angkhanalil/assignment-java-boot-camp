@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import java.time.DateTimeException;
 import java.util.Date;
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class CustomerOrder{
 	private String tracking;
 
 	@OneToMany
-	private List<OrderItemItem> orderItem;
+	private List<CustomerOrderItem> orderItem;
 
 
 
@@ -78,11 +77,11 @@ public class CustomerOrder{
 		return orderid;
 	}
 
-	public void setOrderItem(List<OrderItemItem> orderItem){
+	public void setOrderItem(List<CustomerOrderItem> orderItem){
 		this.orderItem = orderItem;
 	}
 
-	public List<OrderItemItem> getOrderItem(){
+	public List<CustomerOrderItem> getOrderItem(){
 		return orderItem;
 	}
 
