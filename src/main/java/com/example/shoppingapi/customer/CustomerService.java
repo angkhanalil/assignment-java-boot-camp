@@ -16,6 +16,10 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    public void setCustomerRepository(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
     public ResponseEntity<Customer> ShowCustomerData(@NotNull RequestSignIn signIn) {
         String username = signIn.getEmail();
         String password = signIn.getPassword();
