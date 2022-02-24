@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class CustomerAddressItem {
     @Id
-    @ManyToOne
+//    @ManyToOne
     private String customerid;
 
     private String addess;
