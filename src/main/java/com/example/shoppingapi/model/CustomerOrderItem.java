@@ -3,7 +3,7 @@ package com.example.shoppingapi.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 @Entity
-public class OrderItemItem{
+public class CustomerOrderItem {
 
 	@Id
 	private String orderid;
