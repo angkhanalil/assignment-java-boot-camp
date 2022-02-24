@@ -9,13 +9,14 @@ public class Product{
 	private int productid;
 
 	private Double price;
-	private Double sellprice;
+//	private Double sellprice;
 	private String productDetails;
 	private String brand;
 	private String productName;
 	private String category;
+	private String sku;
+
 //	image
-//	sku
 //	store
 //	size
 //	color
@@ -66,5 +67,14 @@ public class Product{
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+
+	public String getSku() {
+		return sku;
+	}
+
+	public void setSku(String sku) {
+		this.sku = sku;
 	}
 }
