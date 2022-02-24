@@ -94,7 +94,7 @@ class ProductServiceTest {
         product.setBrand("ADIDAS");
         product.setProductDetails("detail");
 
-        when(productRepository.findByProductid(2)).thenReturn(product);
+        when(productRepository.findByProductid(1)).thenReturn(product);
         ProductService productService = new ProductService();
         productService.setProductRepository(productRepository);
         ResponseEntity<Product> result = productService.ShowProductbyProductID(1);
