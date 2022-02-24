@@ -12,10 +12,9 @@ public class Cart{
 	private  int cartid;
 
 	private int userid;
-	private String storeid;
 	private String itemid;
 	private int itemqty;
-	private String itemprice;
+//	private String itemprice;
 
 
 	public int getCartid() {
@@ -40,22 +39,6 @@ public class Cart{
 
 	public int getItemqty(){
 		return itemqty;
-	}
-
-	public void setItemprice(String itemprice){
-		this.itemprice = itemprice;
-	}
-
-	public String getItemprice(){
-		return itemprice;
-	}
-
-	public void setStoreid(String storeid){
-		this.storeid = storeid;
-	}
-
-	public String getStoreid(){
-		return storeid;
 	}
 
 	public void setUserid(int userid){
