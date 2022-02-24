@@ -100,7 +100,7 @@ public class ProductService {
 
     public ResponseEntity<Product> ShowProductbyProductID(Integer id) {
         Product result = productRepository.findByProductid(id);
-        if(!result.equals(null)){
+        if(result != null){
             return new ResponseEntity<>(result, HttpStatus.OK) ;
         }
         throw new ProductNotFoundException("Product");
