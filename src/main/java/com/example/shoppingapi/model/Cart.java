@@ -2,17 +2,18 @@ package com.example.shoppingapi.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Cart{
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  int cartid;
 
 	private int userid;
-	private String itemid;
+	private int itemid;
 	private int itemqty;
 //	private String itemprice;
 
@@ -25,12 +26,12 @@ public class Cart{
 		this.cartid = cartid;
 	}
 
-	public void setItemid(String itemid){
-		this.itemid = itemid;
+	public int getItemid() {
+		return itemid;
 	}
 
-	public String getItemid(){
-		return itemid;
+	public void setItemid(int itemid) {
+		this.itemid = itemid;
 	}
 
 	public void setItemqty(int itemqty){
