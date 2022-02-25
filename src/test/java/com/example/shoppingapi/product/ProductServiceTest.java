@@ -73,7 +73,7 @@ class ProductServiceTest {
 //        productRepository.save(product1);
 
 
-        when(productRepository.findByProductNameContaining("Adidas")).thenReturn(  products );
+        when(productRepository.findByProductNameContainingIgnoreCase("Adidas")).thenReturn(  products );
 ////        //Act
         ProductService productService = new ProductService();
         productService.setProductRepository(productRepository);
