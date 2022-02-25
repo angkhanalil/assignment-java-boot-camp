@@ -80,7 +80,7 @@ public class ProductService {
 
 
     public ResponseEntity<List<ResponseProduct>> ShowProductbyProductName_Contain(String productname) {
-        List<Product> result = productRepository.findByProductNameContaining(productname);
+        List<Product> result = productRepository.findByProductNameContainingIgnoreCase(productname);
         List<ResponseProduct> responseproducts = new ArrayList<>();
         if(!result.isEmpty()){
             for(Product prods : result){
