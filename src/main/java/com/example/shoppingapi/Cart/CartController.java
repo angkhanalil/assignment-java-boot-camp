@@ -22,7 +22,7 @@ public class CartController {
     }
 
     @GetMapping("/cart/{userid}")
-    public ResponseEntity<List<Cart>> Cart(@PathVariable Integer userid){
-        return cartService.findCartByUserid(userid);
+    public ResponseEntity<List<CartResponse>> Cart(@PathVariable Integer userid){
+        return cartService.findCartWithProductByUserid(userid);
     }
 }
