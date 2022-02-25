@@ -1,23 +1,20 @@
 package com.example.shoppingapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 public class CustomerOrder{
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int TransOrder;
 
 	private String orderid;
 	private int userid;
 	private Date orderdate;
 
-	private Float netam;
+	private Double netam;
 	private String orderstatus;
 	private String paymenttype;
 	private String paymentdate;
@@ -53,11 +50,11 @@ public class CustomerOrder{
 		return paymentdate;
 	}
 
-	public Float getNetam() {
+	public Double getNetam() {
 		return netam;
 	}
 
-	public void setNetam(Float netam) {
+	public void setNetam(Double netam) {
 		this.netam = netam;
 	}
 
