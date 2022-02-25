@@ -64,7 +64,8 @@ public class CartService {
     //    add
     @Transactional
     public ResponseEntity<Cart> addtoCart(@NotNull Cart newcart) {
-         if(newcart.getItemqty() <= 0){
+         if(newcart.getItemqty() <= 0
+         ){
              throw new InvalidfieldsException("Item QTY");
          }else{
              Cart cart = cartRepository.save(newcart);
