@@ -1,7 +1,9 @@
 package com.example.shoppingapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 import javax.persistence.*;
-import javax.websocket.OnError;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,8 @@ public class Customer {
     private String lastname;
     private String phoneno;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("customer")
     private List<CustomerAddressItem> customerAddress = new ArrayList<>();
 
     public Integer getId() {

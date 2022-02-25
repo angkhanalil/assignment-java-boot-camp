@@ -7,6 +7,7 @@ public class CustomerAddressItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private Integer customerid;
     private String addess;
     private String province;
@@ -15,8 +16,8 @@ public class CustomerAddressItem {
     private String telephone;
     private String fullname;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "customer_id",referencedColumnName = "id")
     private Customer customer;
 
     public int getId() {
