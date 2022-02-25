@@ -24,7 +24,9 @@ public class CustomerService {
         String username = signIn.getEmail();
         String password = signIn.getPassword();
         Customer result = customerRepository.findByUsernameAndPassword(username,password);
+
         if (result != null) {
+
             return new ResponseEntity<>(result, HttpStatus.OK) ;
         }
         throw new CustomerNotFoundException(username);
