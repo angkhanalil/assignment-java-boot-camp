@@ -57,7 +57,7 @@ class ProductRepositoryTest {
     @Test
     void findByProductNameContaining_With_success() {
         //Act
-        List<Product> result = productRepository.findByProductNameContaining("Adidas");
+        List<Product> result = productRepository.findByProductNameContainingIgnoreCase("Adidas");
         //Assert
         assertNotNull(result);
         assertEquals(1,result.size());
@@ -67,7 +67,7 @@ class ProductRepositoryTest {
     @Test
     void findByProductNameContaining_With_failed() {
         //Act
-        List<Product> result = productRepository.findByProductNameContaining("Nike");
+        List<Product> result = productRepository.findByProductNameContainingIgnoreCase("Nike");
         System.out.println("result.size() " + result.size());
         //Assert
         assertEquals(0,result.size());
