@@ -1,15 +1,13 @@
 package com.example.shoppingapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class CustomerAddressItem {
     @Id
-//    @ManyToOne
-    private String customerid;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private Integer customerid;
     private String addess;
     private String province;
     private String city;
@@ -17,11 +15,31 @@ public class CustomerAddressItem {
     private String telephone;
     private String fullname;
 
-    public String getCustomerid() {
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Integer getCustomerid() {
         return customerid;
     }
 
-    public void setCustomerid(String customerid) {
+    public void setCustomerid(Integer customerid) {
         this.customerid = customerid;
     }
 
@@ -72,5 +90,6 @@ public class CustomerAddressItem {
     public String getFullname() {
         return fullname;
     }
+
 
 }

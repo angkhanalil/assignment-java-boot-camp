@@ -1,15 +1,16 @@
 package com.example.shoppingapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.websocket.OnError;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Customer {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String username; //email
     private String password;
 
@@ -17,8 +18,8 @@ public class Customer {
     private String lastname;
     private String phoneno;
 
-    @OneToMany
-    private List<CustomerAddressItem> customerAddress;
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<CustomerAddressItem> customerAddress = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -69,11 +70,11 @@ public class Customer {
         return lastname;
     }
 
-    public void setCustomerAddress(List<CustomerAddressItem> customerAddress) {
-        this.customerAddress = customerAddress;
-    }
-
     public List<CustomerAddressItem> getCustomerAddress() {
         return customerAddress;
+    }
+
+    public void setCustomerAddress(List<CustomerAddressItem> customerAddress) {
+        this.customerAddress = customerAddress;
     }
 }
