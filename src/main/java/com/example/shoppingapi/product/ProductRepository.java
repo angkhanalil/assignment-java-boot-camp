@@ -15,8 +15,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     //    @Query("select p from Product p where p.productid = ?1")
     Product findByProductid(Integer id);
 
-    //    @Query("select p from Product p where p.productName like concat('%', ?1, '%')")
-    List<Product> findByProductNameContaining(String ProductName);
+    List<Product> findByProductNameContainingIgnoreCase(String ProductName);
 
 //    Optional<Product> findByProductName_Containing(String productName);
 
