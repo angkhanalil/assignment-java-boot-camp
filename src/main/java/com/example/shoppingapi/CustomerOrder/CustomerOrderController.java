@@ -22,8 +22,13 @@ public class CustomerOrderController {
 
     }
 
-    @GetMapping("/order/{orderid}")
-    public ResponseEntity<List<CustomerOrder>> Cart(@PathVariable String orderid){
-        return  null;
+    @GetMapping("/order/orderid/{orderid}")
+    public ResponseEntity<CustomerOrder> Cart(@PathVariable String orderid){
+        return  customerOrderService.findCustomerOrderbyOrderId(orderid);
+    }
+
+    @GetMapping("/order/userid/{userid}")
+    public ResponseEntity<List<CustomerOrder>> CartCustomer(@PathVariable Integer userid){
+        return  customerOrderService.findCustomerOrderbyUser(userid);
     }
 }
