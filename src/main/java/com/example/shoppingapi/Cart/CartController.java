@@ -14,10 +14,10 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
-//    add to cart
+
     @PostMapping("/cart")
-    public ResponseEntity<Cart> addtocart(@RequestBody @NotNull Cart carts){
-       return cartService.addtoCart(carts);
+    public ResponseEntity<String> addtocart(@RequestBody @NotNull Cart carts){
+        return cartService.addtoCart(carts);
 
     }
 
