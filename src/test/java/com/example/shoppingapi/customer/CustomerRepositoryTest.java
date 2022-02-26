@@ -29,6 +29,7 @@ class CustomerRepositoryTest {
         customer.setFirstname("Angkhana");
         customer.setLastname("Lila");
         customer.setPhoneno("0999999999");
+        customerRepository.save(customer);
 
         Customer result = customerRepository.findByUsernameAndPassword("abc@gmail.com","1234");
         assertNotNull(result);
@@ -44,7 +45,7 @@ class CustomerRepositoryTest {
         customer.setFirstname("Angkhana");
         customer.setLastname("Lila");
         customer.setPhoneno("0999999999");
-//        customerRepository.save(customer);
+        customerRepository.save(customer);
 
         List<Customer> result = customerRepository.findAll();
 

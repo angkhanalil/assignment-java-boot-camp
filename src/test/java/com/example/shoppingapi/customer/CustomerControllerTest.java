@@ -11,7 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
@@ -31,18 +33,18 @@ class CustomerControllerTest {
     void signIn() {
 
         //Arrange
-        CustomerAddressItem addressItem = new CustomerAddressItem();
-        addressItem.setId(1);
-        addressItem.setAddess("address1");
-        addressItem.setFullname("name1");
-
-        CustomerAddressItem addressItem2 = new CustomerAddressItem();
-        addressItem2.setAddess("address2");
-        addressItem2.setFullname("name2");
-
-        List<CustomerAddressItem> customerAddressItemList = new ArrayList<>();
-        customerAddressItemList.add(addressItem);
-        customerAddressItemList.add(addressItem2);
+//        CustomerAddressItem addressItem = new CustomerAddressItem();
+//        addressItem.setId(1);
+//        addressItem.setAddess("address1");
+//        addressItem.setFullname("name1");
+//
+//        CustomerAddressItem addressItem2 = new CustomerAddressItem();
+//        addressItem2.setAddess("address2");
+//        addressItem2.setFullname("name2");
+//
+//        Set<CustomerAddressItem> customerAddressItemList = new HashSet<>();
+//        customerAddressItemList.add(addressItem);
+//        customerAddressItemList.add(addressItem2);
 
         Customer customer = new Customer();
         customer.setId(1);
@@ -54,7 +56,7 @@ class CustomerControllerTest {
         customerRepository.save(customer);
 
 
-        customer.setCustomerAddress(customerAddressItemList);
+//        customer.setCustomerAddress(customerAddressItemList);
         Customer cust = customerRepository.save(customer);
         when(customerRepository.findByUsernameAndPassword("test@gmail.com","1234")).thenReturn(customer);
 
@@ -82,7 +84,7 @@ class CustomerControllerTest {
         addressItem2.setAddess("address2");
         addressItem2.setFullname("name2");
 
-        List<CustomerAddressItem> customerAddressItemList = new ArrayList<>();
+        Set<CustomerAddressItem> customerAddressItemList = new HashSet<>();
         customerAddressItemList.add(addressItem);
         customerAddressItemList.add(addressItem2);
 
@@ -96,7 +98,7 @@ class CustomerControllerTest {
         customer.setPhoneno("0999999999");
         customerList.add(customer);
 
-        customer.setCustomerAddress(customerAddressItemList);
+//        customer.setCustomerAddress(customerAddressItemList);
         when(customerRepository.findAll()).thenReturn(customerList);
 
         //Act

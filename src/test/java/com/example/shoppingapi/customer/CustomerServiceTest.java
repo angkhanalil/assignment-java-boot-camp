@@ -1,6 +1,7 @@
 package com.example.shoppingapi.customer;
 
 import com.example.shoppingapi.model.Customer;
+import com.example.shoppingapi.model.CustomerAddressItem;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -30,6 +31,7 @@ class CustomerServiceTest {
         customer.setFirstname("Angkhana");
         customer.setLastname("Lila");
         customer.setPhoneno("0999999999");
+
 
         RequestSignIn requestSignIn = new RequestSignIn();
         requestSignIn.setEmail("abc@gmail.com");
