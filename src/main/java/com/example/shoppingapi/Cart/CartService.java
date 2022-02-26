@@ -61,19 +61,19 @@ public class CartService {
         throw new CartNotFoundException(userid.toString());
     }
 
-    //    add
+//add product to Basket
     @Transactional
-    public ResponseEntity<Cart> addtoCart(@NotNull Cart newcart) {
-         if(newcart.getItemqty() <= 0
-         ){
-             throw new InvalidfieldsException("Item QTY");
-         }else{
-             Cart cart = cartRepository.save(newcart);
-             if (cart == null) {
-                 return new ResponseEntity<>(cart, HttpStatus.NOT_FOUND);
-             }
-             return new ResponseEntity<>(cart, HttpStatus.CREATED);
-         }
+    public ResponseEntity<String> addtoCart(@NotNull Cart newcart) {
+        if(newcart.getItemqty() <= 0
+        ){
+            throw new InvalidfieldsException("Item QTY");
+        }else{
+            Cart cart = cartRepository.save(newcart);
+            if (cart == null) {
+                return new ResponseEntity<>("เพิ่มสินค้าลวตะกร้าไม่สำเร็จ", HttpStatus.NOT_FOUND);
+            }
+            return new ResponseEntity<>("สินค้าได้ถูกเพิ่มเข้าไปยังตะกร้าสินค้าของคุณ", HttpStatus.CREATED);
+        }
 
 
     }
