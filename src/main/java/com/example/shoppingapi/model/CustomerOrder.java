@@ -13,17 +13,17 @@ public class CustomerOrder{
 	private String orderid;
 	private int userid;
 	private Date orderdate;
-
 	private Double netam;
 	private String orderstatus;
 	private String paymenttype;
 	private String paymentdate;
-	private String shippingaddress;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	private CustomerAddressItem shippingaddress;
 	private String tracking;
 
 	@OneToMany
 	private List<CustomerOrderItem> orderItem;
-
 
 
 	public int getTransOrder() {
@@ -34,12 +34,12 @@ public class CustomerOrder{
 		TransOrder = transOrder;
 	}
 
-	public void setShippingaddress(String shippingaddress){
-		this.shippingaddress = shippingaddress;
+	public CustomerAddressItem getShippingaddress() {
+		return shippingaddress;
 	}
 
-	public String getShippingaddress(){
-		return shippingaddress;
+	public void setShippingaddress(CustomerAddressItem shippingaddress) {
+		this.shippingaddress = shippingaddress;
 	}
 
 	public void setPaymentdate(String paymentdate){
