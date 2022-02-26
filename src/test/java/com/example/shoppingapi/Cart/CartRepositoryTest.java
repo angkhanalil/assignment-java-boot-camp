@@ -18,16 +18,18 @@ class CartRepositoryTest {
 
     @BeforeEach
     void setup(){
+
+    }
+
+    @Test
+    void findByUserid_with_success() {
         Cart cart = new Cart();
         cart.setCartid(1);
         cart.setItemid(1);
         cart.setItemqty(1);
         cart.setUserid(1);
         cartRepository.save(cart);
-    }
 
-    @Test
-    void findByUserid_with_success() {
         List<Cart> result = cartRepository.findByUserid(1);
         //Assert
         assertTrue(!result.isEmpty());
@@ -36,6 +38,14 @@ class CartRepositoryTest {
 
     @Test
     void findByUserid_with_failed() {
+
+        Cart cart = new Cart();
+        cart.setCartid(1);
+        cart.setItemid(1);
+        cart.setItemqty(1);
+        cart.setUserid(1);
+        cartRepository.save(cart);
+
         List<Cart> result = cartRepository.findByUserid(2);
         //Assert
         assertTrue(result.isEmpty());

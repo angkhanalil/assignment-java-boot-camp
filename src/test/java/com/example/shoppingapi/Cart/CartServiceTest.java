@@ -61,4 +61,9 @@ class CartServiceTest {
         //Assert
         assertEquals(HttpStatus.CREATED,result.getStatusCode());
     }
+
+    @Test
+    void findCartWithProductByUserid() {
+
+    }
 }
