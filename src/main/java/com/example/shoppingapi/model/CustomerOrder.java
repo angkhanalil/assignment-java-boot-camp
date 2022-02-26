@@ -16,7 +16,7 @@ public class CustomerOrder{
 	private Double netam;
 	private String orderstatus;
 	private String paymenttype;
-	private String paymentdate;
+	private Date paymentdate;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private CustomerAddressItem shippingaddress;
@@ -42,12 +42,12 @@ public class CustomerOrder{
 		this.shippingaddress = shippingaddress;
 	}
 
-	public void setPaymentdate(String paymentdate){
-		this.paymentdate = paymentdate;
+	public Date getPaymentdate() {
+		return paymentdate;
 	}
 
-	public String getPaymentdate(){
-		return paymentdate;
+	public void setPaymentdate(Date paymentdate) {
+		this.paymentdate = paymentdate;
 	}
 
 	public Double getNetam() {
