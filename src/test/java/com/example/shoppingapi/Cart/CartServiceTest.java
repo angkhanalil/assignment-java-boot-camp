@@ -57,7 +57,7 @@ class CartServiceTest {
         //Act
         CartService cartService = new CartService();
         cartService.setCartRepository(cartRepository);
-        ResponseEntity<Cart> result = cartService.addtoCart(c1);
+        ResponseEntity<String>result = cartService.addtoCart(c1);
         //Assert
         assertEquals(HttpStatus.CREATED,result.getStatusCode());
     }
