@@ -16,6 +16,7 @@ public class CustomerOrderItem {
 	private Double price;
 	private int qty;
 
+
 	public int getTransItem() {
 		return TransItem;
 	}
