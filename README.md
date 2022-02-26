@@ -7,10 +7,10 @@
     Search-->Detail
     Detail-->Cart
     Cart-->Confirm
-    click A "http://www.github.com" _blank
-    click B "http://www.github.com" "Open this in a new tab" _blank
-    click C href "http://www.github.com" _blank
-    click D href "http://www.github.com" "Open this in a new tab" _blank
+    click Customer "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#1-login-ด้วย-username-abcgmailcom-password-1234" _blank
+    click Search "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#ค้นหา-product-ด้วย-keyword----adidas" "Open this in a new tab" _blank
+    click Detail href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#show-product-detail-ด้วย-id----1" _blank
+    click Cart href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#3-add-to-cart" "Open this in a new tab" _blank
     
 ```
 #### Flow System
