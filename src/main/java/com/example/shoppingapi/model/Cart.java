@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Cart{
@@ -15,6 +16,9 @@ public class Cart{
 	private int userid;
 	private int itemid;
 	private int itemqty;
+	private Date createddate;
+	private Date updateddate;
+
 //	private String itemprice;
 
 
@@ -48,5 +52,21 @@ public class Cart{
 
 	public int getUserid(){
 		return userid;
+	}
+
+	public Date getCreateddate() {
+		return createddate;
+	}
+
+	public void setCreateddate(Date createddate) {
+		this.createddate = createddate;
+	}
+
+	public Date getUpdateddate() {
+		return updateddate;
+	}
+
+	public void setUpdateddate(Date updateddate) {
+		this.updateddate = updateddate;
 	}
 }
