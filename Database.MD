@@ -62,10 +62,10 @@ erDiagram
     }
     CustomerOrderItem ||--o{ Product : have
     CustomerOrder ||--o{ Payment : have 
-    Payment {
-        string firstName
-        string lastName
-        int age
+     Payment {
+        int paymenttypeid
+        string paymenttypename
+       
     }
     
 ```
