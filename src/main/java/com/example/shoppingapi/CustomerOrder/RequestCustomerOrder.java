@@ -11,7 +11,7 @@ public class RequestCustomerOrder {
     private Date orderdate;
     private Double netam;
     private String paymenttype;
-    private String paymentdate;
+    private Date paymentdate;
     private RequestShipping shippingaddress;
     private List<RequestCustomerOrderItem> requestCustomerOrderItemList;
 
@@ -47,11 +47,11 @@ public class RequestCustomerOrder {
         this.paymenttype = paymenttype;
     }
 
-    public String getPaymentdate() {
+    public Date getPaymentdate() {
         return paymentdate;
     }
 
-    public void setPaymentdate(String paymentdate) {
+    public void setPaymentdate(Date paymentdate) {
         this.paymentdate = paymentdate;
     }
 
