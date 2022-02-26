@@ -14,6 +14,7 @@
     click Confirm href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#5-%E0%B8%81%E0%B8%B2%E0%B8%A3-confirm-order" "Open this in a new tab" _blank
     
 ```
+*** Click to see Detail ***
 #### Flow System
 
 > https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System
