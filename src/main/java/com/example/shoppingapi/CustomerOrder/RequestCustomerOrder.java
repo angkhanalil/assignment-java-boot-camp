@@ -1,5 +1,7 @@
 package com.example.shoppingapi.CustomerOrder;
 
+import com.example.shoppingapi.Shipping.RequestShipping;
+
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class RequestCustomerOrder {
     private Double netam;
     private String paymenttype;
     private String paymentdate;
-    private String shippingaddress;
+    private RequestShipping shippingaddress;
     private List<RequestCustomerOrderItem> requestCustomerOrderItemList;
 
     public int getUserid() {
@@ -53,11 +55,11 @@ public class RequestCustomerOrder {
         this.paymentdate = paymentdate;
     }
 
-    public String getShippingaddress() {
+    public RequestShipping getShippingaddress() {
         return shippingaddress;
     }
 
-    public void setShippingaddress(String shippingaddress) {
+    public void setShippingaddress(RequestShipping shippingaddress) {
         this.shippingaddress = shippingaddress;
     }
 
