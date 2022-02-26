@@ -26,6 +26,10 @@ public class CustomerOrderService {
     @Autowired
     private CustomerAddressItemRepository customerAddressItemRepository;
 
+    public void setOrderRepository(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
     public ResponseEntity<List<CustomerOrder>> findCustomerOrderbyUser(Integer userid) {
         List<CustomerOrder> customerOrder = orderRepository.findByUserid(userid);
 
