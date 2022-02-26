@@ -11,6 +11,7 @@
     click Search "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#ค้นหา-product-ด้วย-keyword----adidas" "Open this in a new tab" _blank
     click Detail href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#show-product-detail-ด้วย-id----1" _blank
     click Cart href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#3-add-to-cart" "Open this in a new tab" _blank
+    click Confirm href "https://github.com/angkhanalil/assignment-java-boot-camp/wiki/Flow-System#5-การ-confirm-order" "Open this in a new tab" _blank
     
 ```
 #### Flow System
