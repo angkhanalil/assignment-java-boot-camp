@@ -8,17 +8,18 @@ public class CustomerAddressItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Integer customerid;
     private String addess;
     private String province;
     private String city;
     private String postcode;
     private String telephone;
     private String fullname;
+    private int customerid;
+    private String email;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinColumn(name = "customer_id",referencedColumnName = "id")
-    private Customer customer;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "customerid",referencedColumnName = "id",nullable = false)
+//    private Customer customer;
 
     public int getId() {
         return id;
@@ -28,19 +29,11 @@ public class CustomerAddressItem {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public Integer getCustomerid() {
+    public int getCustomerid() {
         return customerid;
     }
 
-    public void setCustomerid(Integer customerid) {
+    public void setCustomerid(int customerid) {
         this.customerid = customerid;
     }
 
@@ -92,5 +85,11 @@ public class CustomerAddressItem {
         return fullname;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

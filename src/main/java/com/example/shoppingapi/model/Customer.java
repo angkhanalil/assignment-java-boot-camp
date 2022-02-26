@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Customer {
@@ -20,9 +22,9 @@ public class Customer {
     private String lastname;
     private String phoneno;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JsonIgnoreProperties("customer")
+    @OneToMany
     private List<CustomerAddressItem> customerAddress = new ArrayList<>();
+
 
     public Integer getId() {
         return id;
