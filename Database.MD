@@ -1,6 +1,6 @@
 ```mermaid
 erDiagram
-   Customer ||--o{ CustomerAddressItem  : have  
+   Customer }|--|{ CustomerAddressItem  : have  
     Customer {
         int id
         string username
@@ -58,7 +58,7 @@ erDiagram
         strin sku
         double price
     } 
-    CustomerOrder  ||--o{ CustomerAddressItem : send
+    CustomerOrder  ||--o{ CustomerAddressItem : shipping
     CustomerAddressItem {
         int id
         string customerid
